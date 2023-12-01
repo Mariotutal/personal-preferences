@@ -1,0 +1,79 @@
+$primaryColor: #df826c;
+$secondaryColor: #f8ffd2;
+$tertiaryColor: #d0f288;
+$accentColor: #8adab2;
+$contrast: #000070;
+
+.records-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: $contrast;
+}
+h3 {
+  color: $contrast;
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    background-color: $primaryColor;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    &:hover {
+      background-color: darken($primaryColor, 10%);
+      border-color: $accentColor;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: 4px auto -webkit-focus-ring-color;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 15px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: $primaryColor;
+    color: #fff;
+  }
+  tr {
+    color: $contrast;
+  }
+  tr:nth-child(even) {
+    background-color: $accentColor;
+  }
+  tr:nth-child(odd) {
+    background-color: $tertiaryColor;
+  }
+}
